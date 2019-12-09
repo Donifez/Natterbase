@@ -1,22 +1,179 @@
-.App {
-  text-align: center;
+body{
+  width:100%;
+}
+.navbar-expand-lg{
+  width:100%;
+  height:80px;
+  background: #FFFFFF !important;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
 }
 
-.App-logo {
-  height: 40vmin;
+.logo{
+  padding-left:95px;
+}
+ul li{
+ padding-left: 50px;
+}
+.name-image{
+  margin-left: 3px;
+}
+.name select{
+  border:none;
+ 
+
+} 
+.together{
+  display:flex;
+  margin-left: 400px;
+}
+.texts{
+  color: #240F00;
+  font-weight: bolder;
+  margin-left:102px;
+  margin-top:40px;
+  font-family: Avenir Next;
+  font-size: 24px;
+  line-height: 33px;
+}
+.date{
+  color: #737373;
+  font-family: Avenir Next;
+  font-size: 15px;
+  line-height: 20px;
+}
+.cards{
+  padding-left: 100px;
+  width:100%;
+  margin-top:40px;
+}
+.card{
+  width:284px;
+height:200px;
+margin-left:20px;
+border-radius: 4px;
+}
+.crest{
+  margin-top:-138px;
+  margin-left: 160px;
+}
+.number{
+  font-family: Avenir Next;
+font-weight: bolder;
+font-size:32px;
+line-height: 44px;
+letter-spacing: -0.8px;
+color: #4D0032;
+}
+.card-text{
+  font-family: Avenir Next;
+font-size: 15px;
+line-height: 20px;
+display: flex;
+letter-spacing: 0.2px;
+color: #240F00;
+}
+.full-table{
+  width:80.5%;
+  margin-left:92px;
+  margin-top: 70px;
+ 
+}
+table{
+  border:1px solid thin;
+}
+#insurance-text{
+font-family: Avenir Next;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.1px;
+color: #4D0032;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+th{
+  font-family: Avenir Next;
+font-size: 14px;
+line-height: 19px;
+letter-spacing: 0.2px;
+color: #737373;
 }
 
-.App-link {
-  color: #09d3ac;
+ td{
+  font-family: Avenir Next;
+  font-size: 14px;
+color: #240F00;
+} 
+
+@media(max-width:1024px){
+  .together{
+    display:flex;
+    margin-left: 200px;
+  } 
+  .card{
+    margin:10px;
+  }
+  
+}
+.completed{
+  background: rgba(106, 221, 14, 0.2);
+border-radius: 2px;
+color: #6ADD0E;
+width: 106px;
+height: 24px;
+border:none;
+}
+button{
+
+  background: #F58634;
+  border-radius: 2px;
+  color: #FFFFFF;
+  border:none;
+  cursor:pointer;  
+
+}
+
+
+@media(max-width:414px){
+  .crest{
+    width:60px;
+    height: 80px;
+  }
+  .navbar-expand-lg{
+    width:100%;
+  }
+ 
+  table{
+   width:10%;
+    padding:0.1rem;
+    font-size:0.3rem;
+  }
+  .insurance-text{
+    font-size:0.5rem;
+    padding:0.1rem  0.1rem;
+  }
+  th, td,tr{
+    font-size:0.1rem;
+    padding:0.1rem 0.1rem;
+  }
+}
+
+@media(max-width:375px){
+  .navbar-expand-lg{
+    width:100%;
+  }
+  table{
+    width:70%;
+  }
+  .insurance-text{
+    font-size:0.1rem;
+    padding:0.1rem  0.1rem;
+    font-weight: 300;
+  }
+  th, td,tr{
+    font-size:0.2rem;
+    padding:-5rem;
+  }   
+  .crest{
+    width:40px;
+    height: 80px;
+  }
 }

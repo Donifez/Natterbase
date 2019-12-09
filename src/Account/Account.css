@@ -1,0 +1,81 @@
+body{
+    overflow-x: hidden;
+}
+
+.text-settings{
+margin-left: 130px;
+font-family: Soleil;
+font-size: 24px;
+margin-top: 30px;
+}
+.card-account{
+    margin-left: 140px;
+  height:60%;
+}
+/* .acct-image{
+    margin-right: 1000px;
+} */
+.header{
+    display: grid;
+    grid-template-columns: 3fr ;
+    margin-left: 20px;
+}
+.text{
+    margin-top:-30px;
+    margin-left:50px;
+    font-family: Soleil;
+    font-size: 13px;
+    color: #4D0032;
+}
+.card-title{
+    font-family: Soleil;
+font-size: 15px;
+color: #240F00;
+}
+.profile{
+border-radius:50px;
+}
+.upload{
+    margin-left: 120px;
+    margin-top:-90px;
+}
+#inputEmail4{
+
+    background: #E7E7E7;
+border: 1px solid #D3D3D3;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.form-group{
+    margin-top: 20px;
+}
+label{
+text-transform: uppercase;
+font-family: Soleil;
+font-size: 12px;
+color: #4C0032;
+}
+.identity{
+    background: rgba(235, 218, 206, 0.2);
+}
+.fullname{
+    padding-left:40px;
+}
+.dates{
+    
+background: #E7E7E7;
+}
+.save{
+ background: #F58634 !important;
+border-radius: 2px;
+width:80%;
+color:#fff;
+}
+.save:hover{
+    color:#fff;
+    width:82%;
+}
+
+.second-card{
+    margin-top:5%;
+}
