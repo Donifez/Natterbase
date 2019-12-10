@@ -1,6 +1,9 @@
 import React from "react";
 
-const table = ({ applications }) => {
+
+const table = ({applications,isLoading}) => {
+  
+  // console.log(applications)
         return (
             <div className="full-table">
                <table class="table table-striped img-responsive">
@@ -25,11 +28,14 @@ const table = ({ applications }) => {
     </tr>
   </thead>
   <tbody>
-          {/* {applications.map(app=>{
-
+  
+  {isLoading?
+        <p>Loading........</p>
+        :
+      applications && applications.map((app,index)=>(
   <tr>
-      <th scope="row">1</th>
-      <td>Travel Insurance</td>
+<th scope="row">{index}</th>
+          <td>{app.insuranceType}</td>
       <td> ₦21,400,000</td>
       <td>14 0ct 2019 </td>
      
@@ -37,70 +43,13 @@ const table = ({ applications }) => {
       <td><button>Make a claim</button></td>
       <td> <a href="#">More Actions</a></td>
     </tr>
-          })} */}
-
-
-    <tr>
-      <th scope="row">1</th>
-      <td>Travel Insurance</td>
-      <td> ₦21,400,000</td>
-      <td>14 0ct 2019 </td>
-     
-      <td className="completed"><div>Completed</div></td>
-      <td><button>Make a claim</button></td>
-      <td> <a href="#">More Actions</a></td>
-    </tr>
-    {/* <tr>
-      <th scope="row">2</th>
-      <td>Life Insurance</td>
-      <td> ₦21,400,000</td>
-      <td>14 0ct 2019 </td>
-     
-        <td className="completed"><div>Completed</div></td>
-        <td><button>Make a claim</button></td>
-      <td> <a href="#">More Actions</a></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Health Insurance</td>
-      <td> ₦21,400,000</td>
-      <td>14 0ct 2019 </td>
-     
-        <td className="completed"><div>Completed</div></td>
-        <td><button>Make a claim</button></td>
-      <td> <a href="#">More Actions </a></td>
-    </tr>
-
-    <tr>
-      <th scope="row">4</th>
-      <td>Motor Insurance</td>
-      <td> ₦21,400,000</td>
-      <td>14 0ct 2019 </td>
-     
-        <td className="completed"><div>Completed</div></td>
-        <td><button>Make a claim</button></td>
-      <td> <a href="#">More Actions</a></td>
-    </tr>
-
-    <tr>
-      <th scope="row">5</th>
-      <td>Third Party Motor Insurance</td>
-      <td> ₦21,400,000</td>
-      <td>14 0ct 2019 </td>
-     
-        <td className="completed"><div>Completed</div></td>
-        <td><button>Make a claim</button></td>
-
- 
-      <td> <a href="#">More Actions</a></td>
-    </tr>
-   */}
+        ))} 
+    
   </tbody>
 </table>
 
 
             </div>
-        );
-    }
+        )};
 
 export default table;

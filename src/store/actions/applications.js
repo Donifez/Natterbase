@@ -25,10 +25,10 @@ export const getApplication = () => {
 	return dispatch => {
 		dispatch(loading());
 		axios
-			.get("/get-applications")
+			.get("/interview/get-applications")
 			.then(res => {
-                console.log(res);
-				dispatch(getApplicationSuccess(res.applications));
+                // console.log(res);
+				dispatch(getApplicationSuccess(res.data));
 			})
 			.catch(err => dispatch(errorOccured(err)));
 	};

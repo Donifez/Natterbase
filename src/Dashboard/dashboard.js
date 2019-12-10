@@ -21,11 +21,12 @@ class dashboard extends React.Component {
         this.props.onGetStatistics();
     }
     render() {
+        // console.log(this.props.applications)
         return (
             <div>
                 <Navbar/>
-                <Top statistics={this.props.statistics}/>
-                <Table applications={this.props.applications}/>
+                <Top statistics={this.props.statistics} loader={this.props.loader}/>
+                <Table applications={this.props.applications} isLoading={this.props.isLoading}/>
 
             </div>
         );
@@ -33,17 +34,15 @@ class dashboard extends React.Component {
 }
 
 const mapStateToProps=state=>({
-applications: state.app.applications,
-// statistics: state.statistic.statistics,
-
+applications: state.app.applications.applications,
+statistics: state.statistics.statistics.statistics,
 isLoading: state.app.isLoading,
+loader: state.statistics.isLoading
 })
 
 const mapDispatchToProps=dispatch=>({
     onGetApplications: ()=>{dispatch(getApplication())},
-    onGetStatistics: ()=>{dispatch(getStatistic())}
-  
-    
+    onGetStatistics: ()=>{dispatch(getStatistic())}  
 })
 
 export default connect(mapStateToProps,mapDispatchToProps) (dashboard);

@@ -25,10 +25,10 @@ export const getStatistic = () => {
 	return dispatch => {
 		dispatch(loading());
 		axios
-			.get("/get-statistics")
+			.get("/interview/get-statistics")
 			.then(res => {
                 console.log(res);
-				dispatch(getStatisticSuccess(res.statistics));
+				dispatch(getStatisticSuccess(res.data));
 			})
 			.catch(err => dispatch(errorOccured(err)));
 	};
